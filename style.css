@@ -1,0 +1,119 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #010101;
+    background-color: #ffffff;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.custom-list-item::before,
+.custom-list-item::after {
+    content: "";
+    position: absolute;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: 4px;
+    background-image:
+        linear-gradient(#0f7c41, #0f7c41),
+        linear-gradient(#0f7c41, #0f7c41);
+    background-size: 4px 4px;
+    background-position: left center, right center;
+    background-repeat: no-repeat;
+}
+.custom-list-item::before { top: -2px; }
+.custom-list-item::after { bottom: -2px; }
+
+.icon-check {
+    width: 10px;
+    height: 8px;
+    fill: none;
+    stroke: #0f7c41;
+    stroke-width: 8px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.visually-hidden:checked + .checkbox-label .icon-check {
+    opacity: 1;
+}
+
+.custom-input {
+    border: 1px solid transparent;
+}
+.custom-input.invalid {
+    border-color: #ff4d4d !important;
+}
+
+.form.is-success #registrationForm,
+.form.is-success .form-open-modal-btn {
+    display: none !important;
+}
+.form.is-success .success-message {
+    display: flex !important;
+}
+
+.form-wrapper.modal-active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1001;
+    overflow-y: auto;
+    background-color: #ffffff;
+}
+
+.form-wrapper.modal-active .form {
+    min-height: 100vh;
+    padding: 29px 20px;
+    box-shadow: none; 
+}
+
+.form-wrapper.modal-active .form-open-modal-btn {
+    display: none !important;
+}
+
+.form-wrapper.modal-active #registrationForm {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 24px;
+}
+
+.form-wrapper.modal-active .modal-header {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 59px;
+}
+
+.form-wrapper.modal-active .modal-close-btn {
+    display: block !important;
+    position: relative;
+    top: auto;
+    right: auto;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-out;
+}

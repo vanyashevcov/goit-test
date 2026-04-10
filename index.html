@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Excel - GoIT</title>
+  <link rel="shortcut icon" href="./images/logo1x.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./style-tailwind.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4" defer></script>
+  <script src="./script-tailwind.js" defer></script>
+</head>
+
+<body>
+  <section class="relative bg-no-repeat bg-center min-h-[728px] md:min-h-[680px] [@media(min-width:1200px)]:min-h-[798px] bg-[url('./images/background-mobile.png')] md:bg-[url('./images/background-tablet.png')] [@media(min-width:1200px)]:bg-[url('./images/background-desctop.png')]">
+    <div class="mx-auto max-w-[1216px] px-[20px] py-[20px] md:px-[32px] md:py-[29px] [@media(min-width:1200px)]:max-w-[1214px] [@media(min-width:1200px)]:px-0 [@media(min-width:1200px)]:py-[40px]">
+      <img src="./images/logo1x.png" alt="Logo GoIT" width="100" class="mb-[16px] md:mb-[22px] [@media(min-width:1200px)]:mb-[40px] logo" />
+      
+      <div class="flex flex-col items-start gap-[24px] md:flex-row md:items-center md:justify-between md:gap-[32px] [@media(min-width:1200px)]:gap-[104px]">
+        <div class="text-left flex flex-col items-start md:justify-center">
+          <ul class="flex flex-col items-start gap-[8px] mb-[16px] md:gap-[12px] md:mb-[24px] [@media(min-width:1200px)]:flex-row [@media(min-width:1200px)]:gap-[30px] [@media(min-width:1200px)]:mb-[40px]">
+            <li class="custom-list-item relative font-medium text-[14px] leading-[1.43] tracking-[0.08em] text-[#0f7c41] border border-[#0f7c41] border-[0.4px] px-[8px] py-[4px] md:text-[16px] md:leading-[1.5] md:px-[16px] md:py-[6px]">Безоплатний вебінар</li>
+            <li class="custom-list-item relative font-medium text-[14px] leading-[1.43] tracking-[0.08em] text-[#0f7c41] border border-[#0f7c41] border-[0.4px] px-[8px] py-[4px] md:text-[16px] md:leading-[1.5] md:px-[16px] md:py-[6px]">Старт: <span class="font-bold">10 січня 19:30</span></li>
+          </ul>
+          <div>
+            <h1 class="font-bold text-[32px] leading-[1.25] mb-[16px] md:text-[36px] md:leading-[1.22] md:mb-[24px] [@media(min-width:1200px)]:text-[56px] [@media(min-width:1200px)]:mb-[40px]">Навчіться створювати Excel-таблиці на pro-рівні</h1>
+            <p class="text-[16px] leading-[1.5] mb-[24px] [@media(min-width:1200px)]:text-[20px] [@media(min-width:1200px)]:w-full [@media(min-width:1200px)]:max-w-[554px] [@media(min-width:1200px)]:leading-[1.4]">
+              Опануйте функціонал Microsoft Excel, автоматизуйте свою роботу та створюйте таблиці швидко і в задоволення
+            </p>
+          </div>
+        </div>
+
+        <div class="form-wrapper flex justify-center w-full" id="formContainer">
+          <div class="form relative w-full bg-[#ffffff] px-[20px] py-[32px] shadow-[0_0_20px_0_rgba(15,124,65,0.2)] flex flex-col md:w-[336px] md:px-[24px] md:py-[40px] md:min-h-auto [@media(min-width:1200px)]:w-[488px] [@media(min-width:1200px)]:shrink-0 [@media(min-width:1200px)]:p-[48px] [@media(min-width:1200px)]:min-h-[539px]">
+            <div class="modal-header hidden justify-between items-center mb-[59px]">
+              <img src="./images/logo1x.png" alt="Logo GoIT" width="80" />
+              <button type="button" class="hidden modal-close-btn" id="closeModal">
+                <svg class="w-[32px] h-[32px] fill-[#010101]" width="32" height="32">
+                  <use href="./images/sprite.svg#icon-close"></use>
+                </svg>
+              </button>
+            </div>
+            <h2 class="font-bold text-[20px] leading-[1.4] text-center mb-[24px] [@media(min-width:1200px)]:text-[28px] [@media(min-width:1200px)]:leading-[1.14]">Реєструйся просто зараз</h2>
+
+            <div class="timer flex justify-center items-baseline gap-[8px] mx-auto mb-[24px] max-w-[244px] md:w-[243px] md:gap-0 [@media(min-width:1200px)]:w-[254px]" id="timer">
+              <div class="flex flex-col items-center min-w-[50px] md:min-w-[66px]">
+                <span class="font-bold text-[28px] leading-[1.14] md:text-[32px]" id="days">00</span>
+                <span class="font-semibold text-[8px] md:text-[10px]">днів</span>
+              </div>
+              <div class="font-bold text-[24px] text-[rgba(1,1,1,0.2)] pb-[10px] md:text-[28px]">:</div>
+              <div class="flex flex-col items-center min-w-[50px] md:min-w-[66px]">
+                <span class="font-bold text-[28px] leading-[1.14] md:text-[32px]" id="hours">00</span>
+                <span class="font-semibold text-[8px] md:text-[10px]">годин</span>
+              </div>
+              <div class="font-bold text-[24px] text-[rgba(1,1,1,0.2)] pb-[10px] md:text-[28px]">:</div>
+              <div class="flex flex-col items-center min-w-[50px] md:min-w-[66px]">
+                <span class="font-bold text-[28px] leading-[1.14] md:text-[32px]" id="minutes">00</span>
+                <span class="font-semibold text-[8px] md:text-[10px]">хвилин</span>
+              </div>
+              <div class="font-bold text-[24px] text-[rgba(1,1,1,0.2)] pb-[10px] md:text-[28px]">:</div>
+              <div class="flex flex-col items-center min-w-[50px] md:min-w-[66px]">
+                <span class="font-bold text-[28px] leading-[1.14] md:text-[32px] text-[#0f7c41]" id="seconds">00</span>
+                <span class="font-semibold text-[8px] md:text-[10px]">секунд</span>
+              </div>
+            </div>
+
+            <button type="button" class="block w-full py-[16px] bg-[#0f7c41] text-[#ffffff] font-bold text-[16px] leading-[1.5] cursor-pointer border-none md:hidden form-open-modal-btn" id="openMobileModal">Зареєструватися</button>
+
+            <form id="registrationForm" action="https://example.com/register" method="POST" class="hidden md:flex flex-col gap-[20px] [@media(min-width:1200px)]:flex">
+              <div class="flex flex-col relative w-full">
+                <input type="text" name="name" id="userName" placeholder="Введи своє ім’я" required class="custom-input w-full px-[16px] py-[12px] bg-[#f5f5f5] text-[16px] leading-[1.5] outline-none transition-colors font-inherit" />
+              </div>
+              <div class="flex flex-col relative w-full">
+                <input type="email" name="email" id="userEmail" placeholder="Введи свій E-mail" required class="custom-input w-full px-[16px] py-[12px] bg-[#f5f5f5] text-[16px] leading-[1.5] outline-none transition-colors font-inherit" />
+              </div>
+              <div class="flex flex-col relative w-full">
+                <div class="absolute left-[16px] top-1/2 -translate-y-1/2 flex items-center">
+                  <svg class="w-[24px] h-[16px]">
+                    <use href="./images/sprite.svg#icon-flag"></use>
+                  </svg>
+                </div>
+                <input type="tel" name="phone" id="userPhone" placeholder="+380 95 -- -- ---" required class="custom-input w-full px-[16px] py-[12px] bg-[#f5f5f5] text-[16px] leading-[1.5] outline-none pl-[52px] transition-colors font-inherit" />
+              </div>
+              <div class="flex">
+                <input type="checkbox" name="agreement" id="userAgreement" class="visually-hidden" required />
+                <label for="userAgreement" class="flex items-start gap-[8px] cursor-pointer checkbox-label">
+                  <span class="shrink-0 w-[16px] h-[16px] border border-[#0f7c41] flex items-center justify-center bg-transparent mt-[2px] transition-colors">
+                    <svg class="icon-check">
+                      <use href="./images/sprite.svg#icon-check"></use>
+                    </svg>
+                  </span>
+                  <span class="text-[12px] leading-[1.33]">
+                    Згоден з <a href="#" class="text-[#3577f7]">Політика конфеденційності</a> та
+                    <a href="#" class="text-[#3577f7]">Умови користування послугами</a>
+                  </span>
+                </label>
+              </div>
+              <button type="submit" class="w-full py-[18px] bg-[#0f7c41] text-[#ffffff] font-bold text-[18px] border-none cursor-pointer mt-[8px] form-btn">Зареєструватися</button>
+            </form>
+
+            <div id="successMessage" class="hidden flex-col items-center justify-center text-center grow animate-fade-in success-message">
+              <div class="w-[80px] h-[80px] border-[3px] border-[#0f7c41] rounded-full flex items-center justify-center mb-[24px]">
+                <svg width="60" height="60" class="w-[40px] h-[32px] stroke-[#0f7c41] stroke-[8px] fill-none">
+                  <use href="./images/sprite.svg#icon-check"></use>
+                </svg>
+              </div>
+              <h3 class="text-[24px] font-bold mb-[16px]">Успішна реєстрація!</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="modal-backdrop" id="modalBackdrop"></div>
+</body>
+
+</html>
