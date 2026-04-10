@@ -58,6 +58,10 @@ body {
     border-color: #ff4d4d !important;
 }
 
+.visually-hidden.invalid + .checkbox-label span {
+    border-color: #ff4d4d;
+}
+
 .form.is-success #registrationForm,
 .form.is-success .form-open-modal-btn {
     display: none !important;
