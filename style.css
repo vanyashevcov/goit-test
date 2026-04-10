@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     color: #010101;
-    background-color: #ffffff;
+    background-color: #f1f1f1;
 }
 
 .visually-hidden {
@@ -41,9 +41,10 @@ body {
     height: 8px;
     fill: none;
     stroke: #0f7c41;
-    stroke-width: 8px;
+    stroke-width: 2px;
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
+    display: block;
 }
 
 .visually-hidden:checked + .checkbox-label .icon-check {
